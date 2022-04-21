@@ -1,0 +1,20 @@
+{
+  "name": "Parky",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Learning-hands-on-repository/RESTful_dotnetcore.git",
+  "author": "Nara <narawit.tub@outlook.co.th>",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-emoji": "^1.3.1"
+  },
+  "scripts": {
+    "cm": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  }
+}
