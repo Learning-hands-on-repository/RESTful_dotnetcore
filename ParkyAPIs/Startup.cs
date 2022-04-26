@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ParkyAPIs.Repository;
+using ParkyAPIs.Repository.IRepository;
 using ParkyAPIs.Data;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,9 @@ namespace ParkyAPIs
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<INationalParkRepository, NationalParkRepository>();
+
             services.AddControllers();
         }
 
