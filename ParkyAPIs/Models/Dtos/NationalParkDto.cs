@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkyAPIs.Models.Dtos
 {
-    public class NationalPark
+    public class NationalParkDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
