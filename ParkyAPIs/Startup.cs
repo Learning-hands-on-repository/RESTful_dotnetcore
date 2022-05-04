@@ -36,6 +36,13 @@ namespace ParkyAPIs
 
             services.AddAutoMapper(typeof(ParkyMappings));
 
+            services.AddSwaggerGen(option => option.SwaggerDoc("ParkyOpenAPISpec", new Microsoft.OpenApi.Models.OpenApiInfo()
+            {
+                Title = "Parky API",
+                Version = "1",
+            }
+            ));
+
             services.AddControllers();
         }
 
@@ -48,8 +55,8 @@ namespace ParkyAPIs
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
+            app.UseSwagger();
 
             app.UseAuthorization();
 
